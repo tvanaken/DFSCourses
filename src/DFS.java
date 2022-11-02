@@ -15,6 +15,16 @@ public class DFS {
 	//Use a DFS on the source node
 	public void printPrequisites(Course source) {
 		
+		List<Course> arr = new ArrayList<Course>();
+		arr.addAll(source.dependencies);
+		
+		for (Course course : arr) {
+			j
+		}
+
+		for (Course course : arr) {
+			System.out.println(course);
+		}
 	}
 	
 //	DFS(G) // G is a graph
