@@ -16,12 +16,9 @@ public class DFS {
 	public void printPrequisites(Course source) {
 		
 		List<Course> arr = new ArrayList<Course>();
-		arr.addAll(source.dependencies);
+		this.dfsVisit(source, arr);
 		
-		for (Course course : arr) {
-			j
-		}
-
+		arr.remove(arr.size() - 1);
 		for (Course course : arr) {
 			System.out.println(course);
 		}
@@ -51,8 +48,11 @@ public class DFS {
 		for(Course course : this.graph.getCourses()) {
 			if(course.color == DFSNode.Colors.WHITE) {
 				dfsVisit(course, arr);
-				System.out.println(course);
 			}
+		}
+		
+		for (Course course : arr) {
+			System.out.println(course + "f timestamp: " + course.f + "\n");
 		}
 	}
 	
